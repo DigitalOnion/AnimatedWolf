@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AnimatedWolf</string>
+    <string name="app_label">AnimatedWolf - practice app</string>
+
+    <string name="title">Practice app for Animation Schemes.</string>
+    <string name="intro">Tap on the screen or tap on the wolf</string>
 </resources>
