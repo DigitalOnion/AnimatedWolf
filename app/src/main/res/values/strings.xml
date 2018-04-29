@@ -2,6 +2,9 @@
     <string name="app_name">AnimatedWolf</string>
     <string name="app_label">AnimatedWolf - practice app</string>
 
-    <string name="title">Practice app for Animation Schemes.</string>
+    <string name="title">ObjectAnimator demo</string>
     <string name="intro">Tap on the screen or tap on the wolf</string>
+
+    <string name="title2">AnimatedVectorDrawable demo</string>
+    <string name="intro2">Tap on the screen</string>
 </resources>

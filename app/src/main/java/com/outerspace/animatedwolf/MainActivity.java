@@ -3,6 +3,7 @@ package com.outerspace.animatedwolf;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     private FrameLayout playground;
     private ImageView wolf;
+    private ImageView chevronNext;
     private float screenWidth, screenHeight;
     private float wolfWidth, wolfHeight;
 
@@ -38,8 +40,17 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
-    }
 
+        chevronNext = (ImageView) findViewById(R.id.next_animation);
+
+        chevronNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
 
     public void onClickWolfFace(View view) {
         float finalX = 0;
