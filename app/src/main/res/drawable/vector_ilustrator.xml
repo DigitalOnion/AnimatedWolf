@@ -8,7 +8,7 @@
         android:name="rotation_group"
         android:pivotX="12.0"
         android:pivotY="12.0"
-        android:rotation="45"
+        android:rotation="0"
         >
 
         <path

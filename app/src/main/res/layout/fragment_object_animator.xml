@@ -15,4 +15,11 @@
             android:layout_height="100dp"
             app:srcCompat="@drawable/wolf_face" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:layout_gravity="bottom"
+            android:text="@string/intro1"/>
+
 </FrameLayout>
