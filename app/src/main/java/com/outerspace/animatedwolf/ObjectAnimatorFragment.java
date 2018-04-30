@@ -12,9 +12,6 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class ObjectAnimatorFragment extends Fragment {
 
     public static final String TRANSLATION_X = "translationX";
