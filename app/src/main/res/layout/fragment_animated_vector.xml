@@ -9,8 +9,10 @@
     <ImageView
         android:id="@+id/vector_image"
         android:src="@drawable/vector_ilustrator_animated"
+        android:padding="40dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_gravity="center"
         />
 
     <TextView

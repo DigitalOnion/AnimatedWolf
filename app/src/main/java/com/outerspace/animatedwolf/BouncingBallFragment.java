@@ -36,7 +36,7 @@ public class BouncingBallFragment extends Fragment {
     private float arenaW;       // BouncingBallFragment is built on a FrameLayout id=bouncing_arena
     private float arenaH;
     private float fabDiameter;
-
+    private AnimatorSet activeAnimSet;
 
     public BouncingBallFragment() { }     // Required empty public constructor
 
@@ -54,8 +54,6 @@ public class BouncingBallFragment extends Fragment {
     @SuppressLint("ClickableViewAccessibility")  // this is so it does not ask to override performClick
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-
-        Log.d("BOUNCING BALL FRAGMENT", "view class:"  + view.getClass().getName());
 
         // to get the size of the Display
         Display display = view.getDisplay();
@@ -144,10 +142,10 @@ public class BouncingBallFragment extends Fragment {
         fabYAnimator.setRepeatCount(ValueAnimator.INFINITE);
         fabYAnimator.setRepeatMode(ValueAnimator.REVERSE);
 
-        // AnimatorSet will orquestrate the animation of the two (X, Y) components
-        AnimatorSet animSet = new AnimatorSet();
-        animSet.playTogether(fabXAnimator, fabYAnimator);
-        animSet.start();
+        // AnimatorSet will orchestrate the animation of the two (X, Y) components
+        activeAnimSet = new AnimatorSet();
+        activeAnimSet.playTogether(fabXAnimator, fabYAnimator);
+        activeAnimSet.start();
     }
 
 
