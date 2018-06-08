@@ -6,9 +6,13 @@
     <string name="intro0">Swipe to see other animations</string>
     <string name="intro1">Tap on the screen or tap on the wolf</string>
     <string name="intro2">Tap on the image</string>
+    <string name="intro_bouncing_ball">Try to catch the ball</string>
 
     <string name="yes">Yes</string>
     <string name="cancel">Cancel</string>
     <string name="dialog_quit_title">Quit app?</string>
     <string name="dialog_quit_message">Do you want to quit the animation app?</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

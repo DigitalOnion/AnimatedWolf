@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         fragments = new Fragment[] {
                 new ObjectAnimatorFragment(),
                 new AnimatedVectorFragment(),
+                new BouncingBallFragment(),
         };
 
         chevronNext = (ImageView) findViewById(R.id.next_animation);

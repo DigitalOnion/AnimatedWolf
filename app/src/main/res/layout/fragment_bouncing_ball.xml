@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bouncing_arena"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".AnimatedVectorFragment">
+    tools:context=".BouncingBallFragment">
 
-    <ImageView
-        android:id="@+id/vector_image"
-        android:src="@drawable/vector_ilustrator_animated"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         />
+
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/Theme.SubscriptStyle"
-        android:text="@string/intro2"/>
-
+        android:text="@string/intro_bouncing_ball"/>
 </FrameLayout>
