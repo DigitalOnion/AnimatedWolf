@@ -23,6 +23,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
+import android.view.animation.AccelerateInterpolator;
+import android.widget.CheckBox;
 
 /**
  * BouncingBall shows the programmatic use of the Property Animation
@@ -31,6 +33,7 @@ import android.view.ViewTreeObserver;
 public class BouncingBallFragment extends Fragment {
 
     private FloatingActionButton fab;
+    private CheckBox chbx;
     private float screenW;      // whole screen
     private float screenH;
     private float arenaW;       // BouncingBallFragment is built on a FrameLayout id=bouncing_arena
@@ -43,7 +46,6 @@ public class BouncingBallFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(
                 R.layout.fragment_bouncing_ball,
                 container,
@@ -104,6 +106,9 @@ public class BouncingBallFragment extends Fragment {
             });
         }
 
+        chbx = view.findViewById(R.id.use_vert_acceleration);
+        chbx.setChecked(false);
+
         super.onViewCreated(view, savedInstanceState);
     }
 
@@ -119,28 +124,33 @@ public class BouncingBallFragment extends Fragment {
     }
 
     public void startFabAnimation() {
-
-        // very simple one dimension bouncing animation.
+        final int ANIM_DURATION = 1000;
+        final int ANIM_REPETITION = 3;
+        final float ACCEL_FACTOR = 1.7F;
+        
+        // (commented out) Very simple one dimension bouncing animation.
 
 //        ObjectAnimator fabAnimator = ObjectAnimator.ofFloat(fab, View.Y,  arenaH - fabDiameter);
-//        fabAnimator.setDuration(1000);
+//        fabAnimator.setDuration(ANIM_DURATION);
 //        fabAnimator.setRepeatCount(1);
 //        fabAnimator.setRepeatMode(ValueAnimator.REVERSE);
 //        fabAnimator.start();
 
-        // Back and forth continuous bouncing animation
+        // Back and forth repetitive bouncing animation
 
         // X component
         ObjectAnimator fabXAnimator = ObjectAnimator.ofFloat(fab, View.X,  arenaW - fabDiameter);
-        fabXAnimator.setDuration(1000);
-        fabXAnimator.setRepeatCount(ValueAnimator.INFINITE);
+        fabXAnimator.setDuration(ANIM_DURATION);
+        fabXAnimator.setRepeatCount(ANIM_REPETITION);
         fabXAnimator.setRepeatMode(ValueAnimator.REVERSE);
 
         // Y component
         ObjectAnimator fabYAnimator = ObjectAnimator.ofFloat(fab, View.Y,  arenaH - fabDiameter);
-        fabYAnimator.setDuration(1000);
-        fabYAnimator.setRepeatCount(ValueAnimator.INFINITE);
+        fabYAnimator.setDuration(ANIM_DURATION);
+        fabYAnimator.setRepeatCount(ANIM_REPETITION);
         fabYAnimator.setRepeatMode(ValueAnimator.REVERSE);
+        if( chbx.isChecked() )
+            fabYAnimator.setInterpolator(new AccelerateInterpolator(ACCEL_FACTOR));
 
         // AnimatorSet will orchestrate the animation of the two (X, Y) components
         activeAnimSet = new AnimatorSet();
