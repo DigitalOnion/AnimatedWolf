@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
                 new ObjectAnimatorFragment(),
                 new AnimatedVectorFragment(),
                 new BouncingBallFragment(),
+                new CollisionFragment(),
         };
 
         chevronNext = (ImageView) findViewById(R.id.next_animation);

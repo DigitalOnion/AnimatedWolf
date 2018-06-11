@@ -7,6 +7,7 @@
     <string name="intro1">Tap on the screen or tap on the wolf</string>
     <string name="intro2">Tap on the image</string>
     <string name="intro_bouncing_ball">Click on the ball</string>
+    <string name="intro_colliding_balls">Swipe your balls in any direction</string>
     <string name="use_vert_acceleration">Use vertical\nacceleration</string>
     <string name="yes">Yes</string>
     <string name="cancel">Cancel</string>

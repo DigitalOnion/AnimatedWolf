@@ -29,6 +29,7 @@
             app:layout_constraintBottom_toBottomOf="parent"/>
 
         <CheckBox
+            android:id="@+id/use_vert_acceleration"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/Theme.SubscriptStyle"
